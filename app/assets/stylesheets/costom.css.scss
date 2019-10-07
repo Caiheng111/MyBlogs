@@ -1,0 +1,59 @@
+
+$navbar-default-bg:rgb(31,30,118);
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+
+
+#logo{
+  font-family: 'Saira Stencil One', cursive;
+  font-size: 1.5em;
+  color:white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+#link{
+  color:white;
+}
+
+.center{
+  font-size: 100px;
+  text-align:right;
+  
+}
+
+.center h1{
+  font-family: 'Saira Stencil One', cursive;
+  margin-top:140px;
+  margin-right:70px;
+  margin-bottom: -30px;
+  font-size: 90px;
+}
+
+.center .button{
+  margin-right: 180px;
+  padding-right: 15px;
+  padding-top:5px;
+  font-size: 20px;
+  display: inline-block;
+  height: 40px;
+  width: 150px;
+ background:rgb(31,30,118);
+  border-radius: 4px;
+  color:white;
+
+}
+
+.jumbotron{
+  height: 650px;
+  color:white;
+  background: #ffbc42;
+  background-image: asset-url('bg.png');
+  background-repeat: no-repeat;
+  background-size:650px;
+}
+
+
+
