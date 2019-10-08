@@ -12,7 +12,17 @@
           </div>
           <div class="article-body">
             <%=truncate(article.description, length: 400) %>
+            <div class="article-time">
+              <small>Created by <%=article.user.username if article.user%>
+                <%= time_ago_in_words(article.created_at) %> 
+                last updated  <%= time_ago_in_words(article.updated_at)%>ago
+              </small>
+            </div>
+
+            
           </div>
+
+
           <div class="article-action">
             <%= link_to 'Edit', edit_article_path(article), class: "btn btn-primary" %>
             <%= link_to 'Delete', article_path(article), method: :delete, 

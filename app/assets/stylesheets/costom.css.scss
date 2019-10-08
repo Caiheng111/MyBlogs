@@ -58,6 +58,7 @@ $navbar-default-bg:rgb(31,30,118);
 .new-title{
   text-align: center;
   margin-bottom: 50px;
+  color:rgb(31,30,118);
 }
 
 .article-action{
@@ -68,6 +69,7 @@ $navbar-default-bg:rgb(31,30,118);
 .show-title{
   text-align: center;
   margin-bottom: 50px;
+  color:rgb(31,30,118);
 
 }
 
@@ -75,12 +77,23 @@ $navbar-default-bg:rgb(31,30,118);
   font-size: 1.5em;
   font-weight: bold;
   padding-bottom: 20px;
+  
+}
+
+.article-title a{
+  color:rgb(31,30,118);
 }
 
 .article-body{
   border-top:1px solid #eaeaea;
   padding-top:20px;
   padding-bottom: 20px;
+}
+
+.article-time{
+  border-top:1px solid #eaeaea;
+  margin-top:15px;
+  padding-top:10px;
 }
 
 
