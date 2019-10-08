@@ -1,29 +1,47 @@
 
 
-<%if @article.errors.any? %>
-<h2>The following errors are prevented the form from successfully created</h2>
 
-<ul>
-    <% @article.errors.full_messages.each do |msg|%>
-      <li><%=msg%></li>
-    <%end%>
-</ul>
+<%=render 'shared/errors', obj: @article%>
 
-<%end%>
+<div class="row">
+  <div class="col-md-12">
+      <%=form_for(@article,:html=>{class: "form-horizontal", role: "form"}) do |f|%>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">
+            <%=f.label :Title%> <br>
+          </label>
+        
+          <div class="col-sm-8">
+            <%=f.text_field :title, class: "form-control", placeholder:"Title of article", autofocus:true %>
+          </div>
+        </div>
 
 
-<%=form_for @article do |f|%>
-  <p>
-    <%=f.label :title%> <br>
-    <%=f.text_field :title%>
-  </p>
-  <p>
-    <%=f.label :description%> <br>
-    <%=f.text_area :description%>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-<%end%>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">
+            <%=f.label :Content%> <br>
+          </label>
+          <div class="col-sm-8">
+            <%=f.text_area :description, rows:20, class: "form-control", placeholder:"Contents of article", autofocus:true %>
+          </div>
+        </div>
 
-<%= link_to 'Back to article list', articles_path %>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <%=f.submit class: "btn btn-default"%>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+             <%= link_to 'Back to article list', articles_path, class: "btn btn-default" %>
+          </div>
+        </div>
+      <%end%>
+
+
+      
+  </div>
+</div>
+
+
